@@ -1,0 +1,30 @@
+
+.field {
+    display: flex; 
+    flex-direction: column;
+    
+    
+}
+
+.label {
+    flex: 5;
+    font-size: 1.4rem; 
+}
+
+.input {
+    flex: 2;
+    width: 500px;
+}
+
+button {
+    margin: 1rem 0 0 0;
+    padding: 0.5rem;
+    background-color: rgb(3, 19, 241);
+    color: whitesmoke;
+    font-size: 1rem;
+    font-family: 'Recursive', sans-serif;
+}
+
+.serviceRequests {
+    padding: 0.5rem;
+}
