@@ -12,4 +12,8 @@ const render = () => {
     )
 }
 
+mainContainer.addEventListener("stateChanged", customEvent => {
+    console.log("State of data has changed. Regenerating HTML...")
+    render()
+})
 render()

@@ -8,7 +8,7 @@ export const Requests = () => {
         
         const listItems = requests.map((serviceRequest) => 
         (
-            `<li>${[serviceRequest.description]}</li>`
+            `<li>${serviceRequest.description}</li>`
             ))
         html += listItems.join("")       
         html += "</ul>"
