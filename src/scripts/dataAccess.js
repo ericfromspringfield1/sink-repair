@@ -15,7 +15,7 @@ export const fetchRequests = () => {
             )
         }
 
-export const sendRequest = (userServiceRequest) => {
+    export const sendRequest = (userServiceRequest) => {
     const fetchOptions = {
         method: "POST",
         headers: {
@@ -23,17 +23,27 @@ export const sendRequest = (userServiceRequest) => {
         },
         body: JSON.stringify(userServiceRequest)
     }
-        
-        
+
+
     return fetch(`${API}/requests`, fetchOptions)
-    .then(response => response.json())
-    .then(() => {
-        mainContainer.dispatchEvent(new CustomEvent("stateChanged"))
-    })
-    }
+        .then(response => response.json())
+        .then(() => {
+            mainContainer.dispatchEvent(new CustomEvent("stateChanged"))
+        })
+}
         
 export const getRequests = () => {
-        return applicationState.requests
+        return applicationState.requests.map(request => ({...request}))
     }
 
+    const mainContainer = document.querySelector("#container")
 
+    export const deleteRequest = (id) => {
+        return fetch(`${API}/requests/${id}`, { method: "DELETE" })
+            .then(
+                () => {
+                    mainContainer.dispatchEvent(new CustomEvent("stateChanged"))
+                }
+            )
+    }
+    
