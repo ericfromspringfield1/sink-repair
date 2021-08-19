@@ -1,7 +1,6 @@
-import { sendRequest } from "./dataAccess.js"
+import { getPlumbers, sendRequest, getRequests} from "./dataAccess.js"
 
-export const ServiceForm = () => {
-    
+export const ServiceForm = () => {    
         let html = `
             <div class="field">
                 <label class="label" for="serviceDescription">Description</label>
@@ -15,13 +14,15 @@ export const ServiceForm = () => {
                 <label class="label" for="serviceBudget">Budget</label>
                 <input type="number" name="serviceBudget" class="input" />
             </div>
+            
             <div class="field">
                 <label class="label" for="serviceDate">Date needed</label>
                 <input type="date" name="serviceDate" class="input" />
             </div>
     
             <button class="button" id="submitRequest">Submit Request</button>
-        `
+`
+        
     
         return html
     }
