@@ -1,6 +1,17 @@
 {
-  "plumbers": [],
-  "completions": [],
+  "plumbers": [
+    {
+      "id": 1,
+      "name": "Maude"
+    },
+    {
+      "id": 2,
+      "name": "Merle"
+    }
+  ],
+  "completions": [
+    
+  ],
   "requests": [
     {
       "description": "Leaky Faucet",
@@ -15,6 +26,13 @@
       "budget": 898,
       "neededBy": "2021-08-28",
       "id": 2
+    },
+    {
+      "description": "Toilet clogged ",
+      "address": "1525 Hostile Lane",
+      "budget": 545,
+      "neededBy": "2021-08-26",
+      "id": 3
     }
   ]
 }

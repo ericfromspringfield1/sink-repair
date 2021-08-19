@@ -12,6 +12,7 @@ export const SinkRepair = () => {
         <section class="serviceRequests">
             <h2>Service Requests</h2>
             ${Requests()}
+
         </section>
     `
 }
